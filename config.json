@@ -1,0 +1,216 @@
+{
+  "appName": "Kettlebell 30' — Bloque 1",
+  "block": {
+    "name": "Bloque 1",
+    "weeks": "1–4",
+    "focus": "Base y Adaptación"
+  },
+  "intervals": {
+    "workSeconds": 40,
+    "restSeconds": 20
+  },
+  "equipmentDefaults": {
+    "defaultKg": 8,
+    "swingKg": 14
+  },
+  "days": {
+    "A": {
+      "title": "Día A — Metabólico + Abdomen",
+      "warmupMinutes": 6,
+      "cooldownMinutes": 2,
+      "rounds": 3,
+      "main": [
+        {
+          "id": "swing_russian",
+          "name_en": "Kettlebell Swing",
+          "name_es": "Balanceo ruso",
+          "kg": "swing",
+          "notes": "Bisagra de cadera. No elevar sobre la cabeza."
+        },
+        {
+          "id": "deadlift_kb",
+          "name_en": "Kettlebell Deadlift",
+          "name_es": "Peso muerto",
+          "kg": "default",
+          "notes": "Espalda neutra. Empuja el suelo con los pies."
+        },
+        {
+          "id": "row_kb",
+          "name_en": "Kettlebell Row",
+          "name_es": "Remo",
+          "kg": "default",
+          "notes": "Hombro lejos de la oreja. Abdomen firme."
+        },
+        {
+          "id": "suitcase_carry",
+          "name_en": "Suitcase Carry",
+          "name_es": "Caminata tipo maleta",
+          "kg": "default",
+          "notes": "Camina lento. No te inclines. Cambia mano por ronda."
+        }
+      ],
+      "core": [
+        {
+          "id": "rack_march",
+          "name_en": "Rack March",
+          "name_es": "Marcha en rack",
+          "kg": "default",
+          "notes": "Costillas abajo, glúteos firmes. Alterna lado cada intervalo."
+        }
+      ]
+    },
+    "B": {
+      "title": "Día B — Fuerza funcional (rodilla friendly)",
+      "warmupMinutes": 6,
+      "cooldownMinutes": 2,
+      "rounds": 3,
+      "main": [
+        {
+          "id": "goblet_squat_partial",
+          "name_en": "Goblet Squat (partial)",
+          "name_es": "Sentadilla goblet (parcial)",
+          "kg": "default",
+          "notes": "Rango cómodo. Sin rebote. Rodillas siguen la punta del pie."
+        },
+        {
+          "id": "floor_press",
+          "name_en": "Floor Press",
+          "name_es": "Press en el suelo",
+          "kg": "default",
+          "notes": "Codo a ~45°. Controla la bajada."
+        },
+        {
+          "id": "rdl",
+          "name_en": "Romanian Deadlift (RDL)",
+          "name_es": "Peso muerto rumano",
+          "kg": "default",
+          "notes": "Cadera atrás. Tibias casi verticales."
+        },
+        {
+          "id": "suitcase_carry",
+          "name_en": "Suitcase Carry",
+          "name_es": "Caminata tipo maleta",
+          "kg": "default",
+          "notes": "Alterna mano por ronda."
+        }
+      ],
+      "core": [
+        {
+          "id": "incline_plank",
+          "name_en": "Incline Plank",
+          "name_es": "Plancha elevada",
+          "kg": 0,
+          "notes": "Manos en silla/mesa firme. Abdomen activo, glúteos firmes."
+        }
+      ]
+    },
+    "C": {
+      "title": "Día C — Flow + Cardio articular (sin impacto)",
+      "warmupMinutes": 6,
+      "cooldownMinutes": 2,
+      "rounds": 3,
+      "main": [
+        {
+          "id": "deadlift_rack_hold",
+          "name_en": "Deadlift + Rack Hold",
+          "name_es": "Peso muerto + sostén en rack",
+          "kg": "default",
+          "notes": "Sube a rack con control. Mantén postura."
+        },
+        {
+          "id": "march_in_place",
+          "name_en": "March in Place",
+          "name_es": "Marcha en el lugar (con carga)",
+          "kg": "default",
+          "notes": "Marcha lenta. No te inclines."
+        },
+        {
+          "id": "row_kb",
+          "name_en": "Kettlebell Row",
+          "name_es": "Remo",
+          "kg": "default",
+          "notes": "Control total."
+        },
+        {
+          "id": "suitcase_carry",
+          "name_en": "Suitcase Carry",
+          "name_es": "Caminata tipo maleta",
+          "kg": "default",
+          "notes": "Alterna mano por ronda."
+        }
+      ],
+      "core": [
+        {
+          "id": "side_plank_incline",
+          "name_en": "Side Plank (incline)",
+          "name_es": "Plancha lateral elevada",
+          "kg": 0,
+          "notes": "Apoya antebrazo en banco/silla. Mantén línea hombro-cadera."
+        }
+      ]
+    },
+    "D": {
+      "title": "Día D — Core + Control + Movilidad",
+      "warmupMinutes": 6,
+      "cooldownMinutes": 2,
+      "rounds": 3,
+      "main": [
+        {
+          "id": "half_tgu",
+          "name_en": "Half Turkish Get Up",
+          "name_es": "Levantamiento turco parcial",
+          "kg": "default",
+          "notes": "Controlado. Si molesta hombro, hazlo sin peso."
+        },
+        {
+          "id": "halo",
+          "name_en": "Kettlebell Halo",
+          "name_es": "Halo",
+          "kg": "default",
+          "notes": "Movimiento suave. No arquees la espalda."
+        },
+        {
+          "id": "bird_dog",
+          "name_en": "Bird Dog",
+          "name_es": "Extensión cruzada (Bird-dog)",
+          "kg": 0,
+          "notes": "Lento. Espalda neutra. Exhala y aprieta abdomen."
+        },
+        {
+          "id": "suitcase_hold",
+          "name_en": "Suitcase Hold",
+          "name_es": "Sostén tipo maleta",
+          "kg": "default",
+          "notes": "Quieto, postura alta. Alterna mano por ronda."
+        }
+      ],
+      "core": [
+        {
+          "id": "anti_rotation_hold",
+          "name_en": "Anti-rotation hold",
+          "name_es": "Anti-rotación (sostén)",
+          "kg": "default",
+          "notes": "Sostén unilateral. No te inclines. Alterna cada intervalo."
+        }
+      ]
+    }
+  },
+  "videos": {
+    "swing_russian": "https://www.youtube.com/results?search_query=kettlebell+swing+ruso+tecnica",
+    "deadlift_kb": "https://www.youtube.com/results?search_query=kettlebell+deadlift+tecnica",
+    "row_kb": "https://www.youtube.com/results?search_query=kettlebell+row+tecnica",
+    "suitcase_carry": "https://www.youtube.com/results?search_query=suitcase+carry+kettlebell+tecnica",
+    "goblet_squat_partial": "https://www.youtube.com/results?search_query=goblet+squat+kettlebell+tecnica",
+    "floor_press": "https://www.youtube.com/results?search_query=kettlebell+floor+press",
+    "rdl": "https://www.youtube.com/results?search_query=romanian+deadlift+kettlebell+tecnica",
+    "incline_plank": "https://www.youtube.com/results?search_query=incline+plank+technique",
+    "deadlift_rack_hold": "https://www.youtube.com/results?search_query=kettlebell+rack+hold+deadlift",
+    "march_in_place": "https://www.youtube.com/results?search_query=rack+carry+march+kettlebell",
+    "side_plank_incline": "https://www.youtube.com/results?search_query=side+plank+incline+technique",
+    "half_tgu": "https://www.youtube.com/results?search_query=half+turkish+get+up+technique",
+    "halo": "https://www.youtube.com/results?search_query=kettlebell+halo+exercise",
+    "bird_dog": "https://www.youtube.com/results?search_query=bird+dog+exercise+technique",
+    "suitcase_hold": "https://www.youtube.com/results?search_query=suitcase+hold+kettlebell",
+    "anti_rotation_hold": "https://www.youtube.com/results?search_query=anti+rotation+hold+kettlebell"
+  }
+}

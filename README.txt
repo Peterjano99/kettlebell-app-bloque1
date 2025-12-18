@@ -1,20 +1,10 @@
-Kettlebell 30' — Bloque 1 (PWA)
+Kettlebell 30' — Bloque 1 (v1.1)
 ===============================
 
-Qué es:
-- App tipo PWA (se instala en Android/tablet) con timer 40/20, días A-B-C-D, pesos editables y "Hecho".
+Novedades v1.1:
+- Calentamiento guiado 6 min (con video en español).
+- Core 40/20 x 4 con claves visibles + alternancia de lado cuando corresponde.
 
-Instalación (Android / Tablet):
-1) Sube estos archivos a un hosting estático (recomendado: Netlify o GitHub Pages).
-2) Abre la URL en Chrome.
-3) Menú (⋮) -> "Instalar aplicación" o "Agregar a pantalla principal".
-
-Importante:
-- Para que se pueda instalar como app, debe estar en HTTPS (hosting) o en localhost.
-
-Ajuste de pesos:
-- Botón “Mis pesos” -> + / -.
-- Se guarda en el dispositivo (localStorage).
-
-Actualización por bloques:
-- Para Bloque 2 y 3 se reemplaza config.json (y opcionalmente título).
+Videos:
+- Calentamiento (español): https://www.youtube.com/watch?v=9Q0i4Pb6Blc
+- Core antis (español): https://www.youtube.com/watch?v=8k2tATXsrJk

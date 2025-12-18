@@ -1,351 +1,257 @@
-<!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kettlebell 30' — Bloque 1</title>
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#111111" />
-  <style>
-    :root{ --bg:#0f0f10; --card:#171719; --muted:#b9b9bd; --text:#f2f2f4; --accent:#7dd3fc; --danger:#fca5a5; }
-    *{box-sizing:border-box}
-    body{ margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial;
-          background:var(--bg); color:var(--text); }
-    header{ padding:16px 16px 10px; position:sticky; top:0; background:linear-gradient(180deg, rgba(15,15,16,.98), rgba(15,15,16,.75)); backdrop-filter: blur(8px); border-bottom:1px solid rgba(255,255,255,.06);}
-    h1{ font-size:18px; margin:0 0 6px; font-weight:700; }
-    .sub{ color:var(--muted); font-size:13px; }
-    .wrap{ padding:14px 16px 40px; max-width: 840px; margin:0 auto; }
-    .grid{ display:grid; grid-template-columns: 1fr; gap:12px; }
-    @media(min-width:760px){ .grid{ grid-template-columns: 1fr 1fr; } }
-    .card{ background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:16px; padding:14px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
-    .row{ display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
-    .btn{ border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.06); color:var(--text);
-          padding:10px 12px; border-radius:12px; font-weight:650; cursor:pointer; }
-    .btn.primary{ background: rgba(125,211,252,.18); border-color: rgba(125,211,252,.35); }
-    .btn.danger{ background: rgba(252,165,165,.16); border-color: rgba(252,165,165,.35); }
-    .pill{ display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); color:var(--muted); font-size:12px; }
-    .label{ color:var(--muted); font-size:12px; margin-bottom:6px; }
-    select{ width:100%; padding:10px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(0,0,0,.25); color:var(--text); outline:none; }
-    .list{ display:flex; flex-direction:column; gap:10px; margin-top:10px; }
-    .ex{ padding:12px; border-radius:14px; background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); }
-    .ex h3{ margin:0; font-size:14px; }
-    .ex p{ margin:6px 0 0; color:var(--muted); font-size:12px; line-height:1.35; }
-    .ex a{ color:var(--accent); text-decoration:none; font-size:12px; }
-    .big{ font-size:44px; font-weight:800; letter-spacing: -1px; }
-    .phase{ font-size:14px; color:var(--muted); }
-    .bar{ height:10px; border-radius:99px; background:rgba(255,255,255,.06); overflow:hidden; border:1px solid rgba(255,255,255,.08);}
-    .fill{ height:100%; width:0%; background: rgba(125,211,252,.7); transition: width .15s linear; }
-    footer{ color:var(--muted); font-size:12px; margin-top:14px; line-height:1.35;}
-    .sep{ height:1px; background:rgba(255,255,255,.06); margin:10px 0; }
-  </style>
-</head>
-<body>
-<header>
-  <div class="row">
-    <div>
-      <h1 id="appTitle">Kettlebell 30' — Bloque 1</h1>
-      <div class="sub" id="appSub">40/20 • 4 días/semana • 30 min • 8 kg (base) / 14 kg (swing)</div>
-    </div>
-    <div class="pill" id="statusPill">Listo</div>
-  </div>
-</header>
+<!doctype html><html lang="es"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Kettlebell 30' — Bloque 1 (v1.1)</title>
+<link rel="manifest" href="manifest.json"><meta name="theme-color" content="#111111"/>
+<style>
+:root{--bg:#0f0f10;--card:#171719;--muted:#b9b9bd;--text:#f2f2f4;--accent:#7dd3fc;--danger:#fca5a5;--ok:#86efac}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
+header{padding:16px 16px 10px;position:sticky;top:0;background:linear-gradient(180deg,rgba(15,15,16,.98),rgba(15,15,16,.75));backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
+h1{font-size:18px;margin:0 0 6px;font-weight:800}.sub{color:var(--muted);font-size:13px}
+.wrap{padding:14px 16px 40px;max-width:920px;margin:0 auto}.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:840px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:14px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.btn{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:var(--text);padding:10px 12px;border-radius:12px;font-weight:700;cursor:pointer}
+.btn.primary{background:rgba(125,211,252,.18);border-color:rgba(125,211,252,.35)}
+.btn.danger{background:rgba(252,165,165,.16);border-color:rgba(252,165,165,.35)}
+.btn.ok{background:rgba(134,239,172,.14);border-color:rgba(134,239,172,.35)}
+.pill{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:var(--muted);font-size:12px}
+.label{color:var(--muted);font-size:12px;margin-bottom:6px}
+select{width:100%;padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.25);color:var(--text);outline:none}
+.list{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.ex{padding:12px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)}
+.ex h3{margin:0;font-size:14px}.ex p{margin:6px 0 0;color:var(--muted);font-size:12px;line-height:1.35}
+.ex a{color:var(--accent);text-decoration:none;font-size:12px}
+.big{font-size:44px;font-weight:900;letter-spacing:-1px}.phase{font-size:14px;color:var(--muted)}
+.bar{height:10px;border-radius:99px;background:rgba(255,255,255,.06);overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.fill{height:100%;width:0%;background:rgba(125,211,252,.7);transition:width .12s linear}
+footer{color:var(--muted);font-size:12px;margin-top:14px;line-height:1.35}.sep{height:1px;background:rgba(255,255,255,.06);margin:10px 0}
+.hint{color:var(--muted);font-size:12px}
+</style></head><body>
+<header><div class="row">
+<div><h1 id="appTitle">Kettlebell 30' — Bloque 1 (v1.1)</h1><div class="sub">40/20 • Calentamiento 6 min • Core 40/20×4 • 4 días/semana</div></div>
+<div class="pill" id="statusPill">Listo</div></div></header>
 
-<div class="wrap">
-  <div class="grid">
-    <div class="card">
-      <div class="row">
-        <div style="min-width:220px">
-          <div class="label">Semana (Bloque 1)</div>
-          <select id="weekSelect"></select>
-        </div>
-        <div style="min-width:260px">
-          <div class="label">Día</div>
-          <select id="daySelect">
-            <option value="A">A — Metabólico + Abdomen</option>
-            <option value="B">B — Fuerza funcional</option>
-            <option value="C">C — Flow + cardio articular</option>
-            <option value="D">D — Core + control</option>
-          </select>
-        </div>
-      </div>
-      <div class="sep"></div>
-      <div class="row">
-        <button class="btn primary" id="btnToday">Entrenar hoy</button>
-        <button class="btn" id="btnWeights">Mis pesos</button>
-        <button class="btn" id="btnDone">Marcar hecho ✅</button>
-      </div>
-      <footer><b>Rodilla:</b> si dolor &gt; 3/10, reduce rango y prioriza bisagra + carries.</footer>
-    </div>
+<div class="wrap"><div class="grid">
+<div class="card">
+<div class="row">
+<div style="min-width:220px"><div class="label">Semana (Bloque 1)</div><select id="weekSelect"></select></div>
+<div style="min-width:280px"><div class="label">Día</div>
+<select id="daySelect">
+<option value="A">A — Metabólico + Abdomen</option>
+<option value="B">B — Fuerza funcional</option>
+<option value="C">C — Flow + cardio articular</option>
+<option value="D">D — Core + control</option>
+</select></div></div>
+<div class="sep"></div>
+<div class="row">
+<button class="btn primary" id="btnToday">Entrenar hoy</button>
+<button class="btn" id="btnWeights">Mis pesos</button>
+<button class="btn ok" id="btnDone">Marcar hecho ✅</button>
+</div>
+<div class="sep"></div>
+<div class="row">
+<span class="pill" id="intervalPill">40s / 20s</span>
+<span class="pill">🔥 Calentamiento 6 min</span>
+<span class="pill">🧠 Core 40/20 × 4</span>
+</div>
+<footer><b>Rodilla:</b> si dolor &gt; 3/10, reduce rango y prioriza bisagra + carries.</footer>
+</div>
 
-    <div class="card">
-      <div class="row">
-        <div>
-          <div class="label">Sesión guiada 40/20</div>
-          <div class="phase" id="phaseLabel">Listo</div>
-        </div>
-        <div class="pill" id="roundPill">—</div>
-      </div>
-      <div class="row" style="align-items:baseline;">
-        <div class="big" id="timeBig">00:40</div>
-        <div class="pill" id="workRestPill">Trabajo</div>
-      </div>
-      <div class="bar"><div class="fill" id="fill"></div></div>
+<div class="card">
+<div class="row">
+<div><div class="label">Cronómetro guiado</div><div class="phase" id="phaseLabel">Listo</div></div>
+<div class="pill" id="roundPill">—</div></div>
+<div class="row" style="align-items:baseline;">
+<div class="big" id="timeBig">00:40</div><div class="pill" id="workRestPill">Trabajo</div></div>
+<div class="bar"><div class="fill" id="fill"></div></div>
 
-      <div class="ex" style="margin-top:10px;">
-        <h3 id="currentExTitle">Presiona “Entrenar hoy”</h3>
-        <div class="row" style="margin-top:6px;">
-          <span class="pill" id="kgPill">—</span>
-          <a href="#" target="_blank" rel="noopener" id="videoLink" style="display:none;">Ver video</a>
-        </div>
-        <p id="currentExNote">La app te guiará por calentamiento, bloque principal, core y movilidad.</p>
-        <div class="row" style="margin-top:10px;">
-          <button class="btn" id="btnPrev">◀︎</button>
-          <button class="btn primary" id="btnStart">Iniciar</button>
-          <button class="btn" id="btnNext">▶︎</button>
-          <button class="btn danger" id="btnStop">Detener</button>
-        </div>
-      </div>
-      <footer>Postura alta • abdomen activo • técnica primero • respiración controlada.</footer>
-    </div>
-  </div>
+<div class="ex" style="margin-top:10px;">
+<h3 id="currentExTitle">Presiona “Entrenar hoy”</h3>
+<div class="row" style="margin-top:6px;">
+<span class="pill" id="kgPill">—</span>
+<a href="#" target="_blank" rel="noopener" id="videoLink" style="display:none;">Ver video</a>
+</div>
+<p id="currentExNote">Calentamiento → bloque principal → core → movilidad.</p>
+<div class="row" style="margin-top:10px;">
+<button class="btn" id="btnPrev">◀︎</button>
+<button class="btn primary" id="btnStart">Iniciar</button>
+<button class="btn" id="btnNext">▶︎</button>
+<button class="btn danger" id="btnStop">Detener</button>
+</div>
+<div class="hint" id="coreCues" style="margin-top:10px;display:none;">
+<b>Core:</b> Costillas abajo • Glúteos firmes • Abdomen activo • Alterna lado cada intervalo
+</div>
+</div>
+<footer>Regla: técnica primero. Si pierdes forma, baja el peso antes de subir.</footer>
+</div>
+</div>
 
-  <div class="card" style="margin-top:12px;">
-    <div class="row">
-      <div>
-        <div class="label">Rutina del día</div>
-        <h2 style="margin:0;font-size:16px;" id="dayTitle">—</h2>
-      </div>
-      <span class="pill" id="intervalPill">40s / 20s</span>
-    </div>
-    <div class="list" id="exList"></div>
-  </div>
+<div class="card" style="margin-top:12px;">
+<div class="row">
+<div><div class="label">Rutina del día</div><h2 style="margin:0;font-size:16px;" id="dayTitle">—</h2></div>
+<a class="pill" id="warmupLink" href="#" target="_blank" rel="noopener">▶️ Calentamiento (video)</a>
+</div>
+<div class="list" id="exList"></div>
+</div>
 
-  <div class="card" id="modal" style="display:none; margin-top:12px;">
-    <div class="row">
-      <h2 style="margin:0;font-size:16px;" id="modalTitle">—</h2>
-      <button class="btn" id="modalClose">Cerrar</button>
-    </div>
-    <div id="modalBody" style="margin-top:10px;"></div>
-  </div>
+<div class="card" id="modal" style="display:none;margin-top:12px;">
+<div class="row"><h2 style="margin:0;font-size:16px;" id="modalTitle">—</h2><button class="btn" id="modalClose">Cerrar</button></div>
+<div id="modalBody" style="margin-top:10px;"></div>
+</div>
 </div>
 
 <script>
 (async function(){
-  const $ = (id)=>document.getElementById(id);
-  if ("serviceWorker" in navigator){ try{ await navigator.serviceWorker.register("./sw.js"); }catch(e){} }
+const $=id=>document.getElementById(id);
+if("serviceWorker"in navigator){try{await navigator.serviceWorker.register("./sw.js")}catch(e){}}
+const LS={get:(k,fb)=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v):fb}catch(e){return fb}},set:(k,v)=>localStorage.setItem(k,JSON.stringify(v))};
 
-  const LS = {
-    get:(k,fb)=>{ try{ const v=localStorage.getItem(k); return v?JSON.parse(v):fb; }catch(e){ return fb; } },
-    set:(k,v)=>localStorage.setItem(k, JSON.stringify(v))
-  };
+const cfg=await fetch("./config.json").then(r=>r.json());
+$("appTitle").textContent=cfg.appName;
+const workS=cfg.intervals.workSeconds, restS=cfg.intervals.restSeconds;
+$("intervalPill").textContent=`${workS}s / ${restS}s`;
+$("warmupLink").href=cfg.warmup.video;
 
-  const cfg = await fetch("./config.json").then(r=>r.json());
-  $("appTitle").textContent = cfg.appName;
-  const workS = cfg.intervals.workSeconds, restS = cfg.intervals.restSeconds;
-  $("intervalPill").textContent = `${workS}s / ${restS}s`;
+let week=LS.get("kb.week",1);
+let day=LS.get("kb.day","A");
+let weights=LS.get("kb.weights",{defaultKg:cfg.equipmentDefaults.defaultKg,swingKg:cfg.equipmentDefaults.swingKg});
+LS.set("kb.weights",weights);
 
-  let week = LS.get("kb.week", 1);
-  let day = LS.get("kb.day", "A");
-  let weights = LS.get("kb.weights", {defaultKg: cfg.equipmentDefaults.defaultKg, swingKg: cfg.equipmentDefaults.swingKg});
-  LS.set("kb.weights", weights);
+const weekSel=$("weekSelect");
+for(let w=1;w<=4;w++){const o=document.createElement("option");o.value=w;o.textContent=`Semana ${w}`;weekSel.appendChild(o)}
+weekSel.value=String(week);$("daySelect").value=day;
 
-  const weekSel = $("weekSelect");
-  for (let w=1; w<=4; w++){ const o=document.createElement("option"); o.value=w; o.textContent=`Semana ${w}`; weekSel.appendChild(o); }
-  weekSel.value = String(week);
-  $("daySelect").value = day;
+const state={steps:[],idx:0,running:false,last:0,sec:workS,isWork:true};
 
-  const state = { steps:[], idx:0, running:false, last:0, sec:workS, isWork:true };
+const doneKey=()=>`w${week}-${day}`;
+function updateStatus(){const done=LS.get("kb.done",{});$("statusPill").textContent=done[doneKey()]?`Semana ${week} • Día ${day} • Hecho ✅`:`Semana ${week} • Día ${day} • Pendiente`}
+function kgOf(ex){if(ex.kg==="swing")return weights.swingKg;if(ex.kg==="default")return weights.defaultKg;if(typeof ex.kg==="number")return ex.kg;return weights.defaultKg}
 
-  function doneKey(){ return `w${week}-${day}`; }
-  function updateStatus(){
-    const done = LS.get("kb.done", {});
-    $("statusPill").textContent = done[doneKey()] ? `Semana ${week} • Día ${day} • Hecho ✅` : `Semana ${week} • Día ${day} • Pendiente`;
-  }
-  function kgOf(ex){
-    if (ex.kg==="swing") return weights.swingKg;
-    if (ex.kg==="default") return weights.defaultKg;
-    if (typeof ex.kg==="number") return ex.kg;
-    return weights.defaultKg;
-  }
+function renderDay(){
+const d=cfg.days[day];$("dayTitle").textContent=d.title;
+const list=$("exList");list.innerHTML="";
+const w=cfg.warmup;
+const warm=document.createElement("div");warm.className="ex";
+warm.innerHTML=`<h3>🔥 ${w.title}</h3><div class="row" style="margin-top:6px;"><span class="pill">${w.minutes} min</span><a href="${w.video}" target="_blank" rel="noopener">Ver video (español)</a></div><p>${w.notes}</p>`;
+list.appendChild(warm);
 
-  function renderDay(){
-    const d = cfg.days[day];
-    $("dayTitle").textContent = d.title;
-    const list = $("exList"); list.innerHTML = "";
-    const info = document.createElement("div"); info.className="ex";
-    info.innerHTML = `<h3>Estructura</h3><p>Calentamiento ${d.warmupMinutes} min • ${d.main.length} ejercicios × ${d.rounds} rondas (40/20) • Core 4 intervalos • Movilidad 2 min</p>`;
-    list.appendChild(info);
+const info=document.createElement("div");info.className="ex";
+info.innerHTML=`<h3>Estructura</h3><p>Calentamiento ${w.minutes} min • ${d.main.length} ejercicios × ${d.rounds} rondas (40/20) • Core 40/20 × ${cfg.core.intervals} • Movilidad ${d.cooldownMinutes} min</p>`;
+list.appendChild(info);
 
-    d.main.forEach((ex,i)=>{
-      const box=document.createElement("div"); box.className="ex";
-      const vid = cfg.videos[ex.id];
-      box.innerHTML = `<h3>${i+1}. ${ex.name_en} <span style="color:var(--muted);font-weight:600;">(${ex.name_es})</span></h3>
-        <div class="row" style="margin-top:6px;">
-          <span class="pill">${kgOf(ex)?kgOf(ex)+" kg":"Sin carga"}</span>
-          ${vid?`<a href="${vid}" target="_blank" rel="noopener">Ver video</a>`:""}
-        </div>
-        <p>${ex.notes||""}</p>`;
-      list.appendChild(box);
-    });
+d.main.forEach((ex,i)=>{
+const box=document.createElement("div");box.className="ex";
+const vid=cfg.videos[ex.id];
+box.innerHTML=`<h3>${i+1}. ${ex.name_en} <span style="color:var(--muted);font-weight:600;">(${ex.name_es})</span></h3>
+<div class="row" style="margin-top:6px;"><span class="pill">${kgOf(ex)?kgOf(ex)+" kg":"Sin carga"}</span>${vid?`<a href="${vid}" target="_blank" rel="noopener">Ver video</a>`:""}</div>
+<p>${ex.notes||""}</p>`;
+list.appendChild(box);
+});
 
-    const core = d.core[0];
-    const cbox=document.createElement("div"); cbox.className="ex";
-    const vidc = cfg.videos[core.id];
-    cbox.innerHTML = `<h3>Core (40/20 × 4)</h3>
-      <div class="row" style="margin-top:6px;">
-        <span class="pill">${core.name_en} <span style="opacity:.85">(${core.name_es})</span></span>
-        <span class="pill">${kgOf(core)?kgOf(core)+" kg":"Sin carga"}</span>
-        ${vidc?`<a href="${vidc}" target="_blank" rel="noopener">Ver video</a>`:""}
-      </div><p>${core.notes||""}</p>`;
-    list.appendChild(cbox);
+const core=d.core[0];
+const cbox=document.createElement("div");cbox.className="ex";
+cbox.innerHTML=`<h3>🧠 Core (40/20 × ${cfg.core.intervals})</h3>
+<div class="row" style="margin-top:6px;"><span class="pill">${core.name_en} <span style="opacity:.85">(${core.name_es})</span></span><span class="pill">${kgOf(core)?kgOf(core)+" kg":"Sin carga"}</span><a href="${cfg.core.video}" target="_blank" rel="noopener">Ver video core (español)</a></div>
+<p><b>Claves:</b> ${cfg.core.cues.join(" • ")}</p><p>${core.notes||""}</p>`;
+list.appendChild(cbox);
 
-    updateStatus();
-  }
+updateStatus();
+}
 
-  function buildSteps(){
-    const d = cfg.days[day];
-    const steps = [];
-    steps.push({type:"warmup", title:"Calentamiento (6 min)", note:"Respiración + bisagra + glúteos + movilidad + marcha.", seconds:d.warmupMinutes*60});
+function buildSteps(){
+const d=cfg.days[day];const steps=[];
+for(const seg of cfg.warmup.plan){steps.push({type:"warmup",title:`Calentamiento: ${seg.name}`,note:cfg.warmup.notes,seconds:seg.seconds,video:cfg.warmup.video})}
+for(let r=1;r<=d.rounds;r++){
+for(const ex of d.main){steps.push({type:"work",ex,round:r});steps.push({type:"rest",ex,round:r})}
+if(r<d.rounds)steps.push({type:"between",title:"Transición",note:"Respira, ajusta postura, cambia mano si corresponde.",seconds:40})
+}
+const core=d.core[0];
+for(let i=1;i<=cfg.core.intervals;i++){
+const side=core.alternateSides?(i%2===1?"Derecho":"Izquierdo"):null;
+steps.push({type:"core_work",ex:core,round:i,side});steps.push({type:"core_rest",ex:core,round:i,side})
+}
+steps.push({type:"cooldown",title:"Movilidad (2 min)",note:"Caderas + espalda baja + respiración final.",seconds:d.cooldownMinutes*60})
+state.steps=steps;state.idx=0;setStep()
+}
 
-    for (let r=1;r<=d.rounds;r++){
-      for (const ex of d.main){
-        steps.push({type:"work", ex, round:r});
-        steps.push({type:"rest", ex, round:r});
-      }
-      if (r<d.rounds) steps.push({type:"between", title:"Transición", note:"Respira, ajusta postura, cambia mano si corresponde.", seconds:40});
-    }
+function setStep(){
+const s=state.steps[state.idx];$("coreCues").style.display="none";
+if(!s){$("currentExTitle").textContent="Sesión terminada";$("currentExNote").textContent="Marca hecho ✅";$("kgPill").textContent="—";$("videoLink").style.display="none";$("roundPill").textContent="—";return}
+if(["warmup","between","cooldown"].includes(s.type)){
+state.isWork=true;state.sec=s.seconds;
+$("workRestPill").textContent=s.type==="between"?"Transición":(s.type==="cooldown"?"Movilidad":"Calentamiento");
+$("phaseLabel").textContent=s.type==="warmup"?`Calentamiento (${cfg.warmup.minutes} min)`:"Control y respiración";
+$("roundPill").textContent=s.type==="warmup"?"🔥 Warm-up":(s.type==="between"?"Entre rondas":"—");
+$("currentExTitle").textContent=s.title;$("currentExNote").textContent=s.note;$("kgPill").textContent="—";
+if(s.video){$("videoLink").href=s.video;$("videoLink").textContent="Ver video (español)";$("videoLink").style.display="inline"} else {$("videoLink").style.display="none"}
+renderTime();return
+}
+const isRest=s.type.endsWith("rest");
+state.isWork=!isRest;state.sec=isRest?restS:workS;
+const ex=s.ex;const kg=kgOf(ex);const vid=cfg.videos[ex.id];
+$("workRestPill").textContent=isRest?"Descanso":"Trabajo";
+$("phaseLabel").textContent=s.type.startsWith("core")?"Core (40/20×4)":"Bloque principal (40/20)";
+$("roundPill").textContent=s.type.startsWith("core")?`Core ${s.round}/${cfg.core.intervals}`:`Ronda ${s.round}/${cfg.days[day].rounds}`;
+const sideTxt=(s.type.startsWith("core")&&s.side)?` — Lado ${s.side}`:"";
+$("currentExTitle").textContent=`${ex.name_en} (${ex.name_es})${sideTxt}`;
+$("currentExNote").textContent=ex.notes||"";$("kgPill").textContent=kg?`${kg} kg`:"Sin carga";
+if(s.type.startsWith("core")){$("videoLink").href=cfg.core.video;$("videoLink").textContent="Ver video core (español)";$("videoLink").style.display="inline";$("coreCues").style.display="block"}
+else if(vid){$("videoLink").href=vid;$("videoLink").textContent="Ver video";$("videoLink").style.display="inline"}
+else{$("videoLink").style.display="none"}
+renderTime()
+}
 
-    const core = d.core[0];
-    for (let i=1;i<=4;i++){
-      steps.push({type:"core_work", ex:core, round:i});
-      steps.push({type:"core_rest", ex:core, round:i});
-    }
+function fmt(sec){sec=Math.max(0,Math.floor(sec));const m=Math.floor(sec/60),s=sec%60;return `${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`}
+function renderTime(){
+$("timeBig").textContent=fmt(state.sec);
+const s=state.steps[state.idx];
+const total=(s&&["warmup","between","cooldown"].includes(s.type))?s.seconds:(state.isWork?workS:restS);
+const pct=total?(1-(state.sec/total))*100:0;
+$("fill").style.width=`${Math.min(100,Math.max(0,pct))}%`
+}
 
-    steps.push({type:"cooldown", title:"Movilidad (2 min)", note:"Caderas + espalda baja + respiración final.", seconds:d.cooldownMinutes*60});
-    state.steps = steps; state.idx = 0;
-    setStep();
-  }
+function loop(ts){
+if(!state.running)return;
+if(!state.last)state.last=ts;
+const dt=(ts-state.last)/1000;state.last=ts;state.sec-=dt;
+if(state.sec<=0){state.idx++;if(state.idx>=state.steps.length){state.running=false;setStep();return}setStep()}
+renderTime();if(state.running)requestAnimationFrame(loop)
+}
+function start(){if(!state.steps.length)buildSteps();if(state.running)return;state.running=true;state.last=0;requestAnimationFrame(loop)}
+function stop(){state.running=false;state.last=0}
 
-  function setStep(){
-    const s = state.steps[state.idx];
-    if (!s){ $("currentExTitle").textContent="Sesión terminada"; $("currentExNote").textContent="Marca hecho ✅"; $("kgPill").textContent="—"; $("videoLink").style.display="none"; $("roundPill").textContent="—"; return; }
+function trainToday(){
+const done=LS.get("kb.done",{});const order=["A","B","C","D"];
+let pick=day;for(const d of order){if(!done[`w${week}-${d}`]){pick=d;break}}
+day=pick;$("daySelect").value=day;LS.set("kb.day",day);renderDay();buildSteps()
+}
 
-    if (["warmup","between","cooldown"].includes(s.type)){
-      state.isWork=true; state.sec=s.seconds;
-      $("workRestPill").textContent = s.type==="between" ? "Transición" : (s.type==="cooldown" ? "Movilidad" : "Calentamiento");
-      $("phaseLabel").textContent="Control y respiración";
-      $("roundPill").textContent = s.type==="between" ? "Entre rondas" : "—";
-      $("currentExTitle").textContent=s.title;
-      $("currentExNote").textContent=s.note;
-      $("kgPill").textContent="—";
-      $("videoLink").style.display="none";
-      renderTime();
-      return;
-    }
+function openWeights(){
+const html=`
+<div class="label">Ajusta tus pesos (se guarda automático)</div>
+<div class="ex"><div class="row"><div><h3 style="margin:0">Peso base (default)</h3><p>Usado en la mayoría de ejercicios.</p></div>
+<div class="row" style="gap:8px"><button class="btn" id="dMinus">−</button><span class="pill"><b id="dVal">${weights.defaultKg}</b> kg</span><button class="btn" id="dPlus">+</button></div></div></div>
+<div class="ex"><div class="row"><div><h3 style="margin:0">Swing</h3><p>Solo para balanceo ruso.</p></div>
+<div class="row" style="gap:8px"><button class="btn" id="sMinus">−</button><span class="pill"><b id="sVal">${weights.swingKg}</b> kg</span><button class="btn" id="sPlus">+</button></div></div></div>`;
+$("modalTitle").textContent="Mis pesos";$("modalBody").innerHTML=html;$("modal").style.display="block";
+const clamp=v=>Math.max(2,Math.min(40,v));
+$("dMinus").onclick=()=>{weights.defaultKg=clamp(weights.defaultKg-1);$("dVal").textContent=weights.defaultKg;LS.set("kb.weights",weights);renderDay()};
+$("dPlus").onclick =()=>{weights.defaultKg=clamp(weights.defaultKg+1);$("dVal").textContent=weights.defaultKg;LS.set("kb.weights",weights);renderDay()};
+$("sMinus").onclick=()=>{weights.swingKg=clamp(weights.swingKg-1);$("sVal").textContent=weights.swingKg;LS.set("kb.weights",weights);renderDay()};
+$("sPlus").onclick =()=>{weights.swingKg=clamp(weights.swingKg+1);$("sVal").textContent=weights.swingKg;LS.set("kb.weights",weights);renderDay()};
+}
 
-    const isRest = s.type.endsWith("rest");
-    state.isWork = !isRest;
-    state.sec = isRest ? restS : workS;
+$("modalClose").onclick=()=>{$("modal").style.display="none"};
+weekSel.onchange=e=>{week=Number(e.target.value);LS.set("kb.week",week);updateStatus()};
+$("daySelect").onchange=e=>{day=e.target.value;LS.set("kb.day",day);renderDay();buildSteps()};
+$("btnToday").onclick=()=>trainToday();
+$("btnWeights").onclick=()=>openWeights();
+$("btnDone").onclick=()=>{const done=LS.get("kb.done",{});done[doneKey()]={ts:Date.now()};LS.set("kb.done",done);updateStatus()};
+$("btnStart").onclick=()=>start();$("btnStop").onclick=()=>stop();
+$("btnPrev").onclick=()=>{state.idx=Math.max(0,state.idx-1);setStep()};
+$("btnNext").onclick=()=>{state.idx=Math.min(state.steps.length,state.idx+1);setStep()};
 
-    const ex = s.ex;
-    const kg = kgOf(ex);
-    const vid = cfg.videos[ex.id];
-
-    $("workRestPill").textContent = isRest ? "Descanso" : "Trabajo";
-    $("phaseLabel").textContent = s.type.startsWith("core") ? "Core" : "Bloque principal";
-    $("roundPill").textContent = s.type.startsWith("core") ? `Core ${s.round}/4` : `Ronda ${s.round}/${cfg.days[day].rounds}`;
-    $("currentExTitle").textContent = `${ex.name_en} (${ex.name_es})`;
-    $("currentExNote").textContent = ex.notes || "";
-    $("kgPill").textContent = kg ? `${kg} kg` : "Sin carga";
-    if (vid){ $("videoLink").href=vid; $("videoLink").style.display="inline"; } else { $("videoLink").style.display="none"; }
-    renderTime();
-  }
-
-  function fmt(sec){ sec=Math.max(0,Math.floor(sec)); const m=Math.floor(sec/60), s=sec%60; return `${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`; }
-  function renderTime(){
-    $("timeBig").textContent = fmt(state.sec);
-    const s = state.steps[state.idx];
-    const total = (s && ["warmup","between","cooldown"].includes(s.type)) ? s.seconds : (state.isWork?workS:restS);
-    const pct = total ? (1 - (state.sec/total))*100 : 0;
-    $("fill").style.width = `${Math.min(100,Math.max(0,pct))}%`;
-  }
-
-  function loop(ts){
-    if (!state.running) return;
-    if (!state.last) state.last = ts;
-    const dt = (ts - state.last)/1000;
-    state.last = ts;
-    state.sec -= dt;
-    if (state.sec <= 0){
-      state.idx++;
-      if (state.idx >= state.steps.length){ state.running=false; setStep(); return; }
-      setStep();
-    }
-    renderTime();
-    if (state.running) requestAnimationFrame(loop);
-  }
-
-  function start(){ if (!state.steps.length) buildSteps(); if (state.running) return; state.running=true; state.last=0; requestAnimationFrame(loop); }
-  function stop(){ state.running=false; state.last=0; }
-
-  function trainToday(){
-    const done = LS.get("kb.done", {});
-    const order = ["A","B","C","D"];
-    let pick = day;
-    for (const d of order){ if (!done[`w${week}-${d}`]) { pick = d; break; } }
-    day = pick;
-    $("daySelect").value = day;
-    LS.set("kb.day", day);
-    renderDay();
-    buildSteps();
-  }
-
-  function openWeights(){
-    const html = `
-      <div class="label">Ajusta tus pesos (se guarda automático)</div>
-      <div class="ex">
-        <div class="row">
-          <div><h3 style="margin:0">Peso base (default)</h3><p>Usado en la mayoría de ejercicios.</p></div>
-          <div class="row" style="gap:8px">
-            <button class="btn" id="dMinus">−</button>
-            <span class="pill"><b id="dVal">${weights.defaultKg}</b> kg</span>
-            <button class="btn" id="dPlus">+</button>
-          </div>
-        </div>
-      </div>
-      <div class="ex">
-        <div class="row">
-          <div><h3 style="margin:0">Swing</h3><p>Solo para balanceo ruso.</p></div>
-          <div class="row" style="gap:8px">
-            <button class="btn" id="sMinus">−</button>
-            <span class="pill"><b id="sVal">${weights.swingKg}</b> kg</span>
-            <button class="btn" id="sPlus">+</button>
-          </div>
-        </div>
-      </div>`;
-    $("modalTitle").textContent="Mis pesos";
-    $("modalBody").innerHTML=html;
-    $("modal").style.display="block";
-    const clamp=v=>Math.max(2,Math.min(40,v));
-    $("dMinus").onclick=()=>{ weights.defaultKg=clamp(weights.defaultKg-1); $("dVal").textContent=weights.defaultKg; LS.set("kb.weights",weights); renderDay(); };
-    $("dPlus").onclick =()=>{ weights.defaultKg=clamp(weights.defaultKg+1); $("dVal").textContent=weights.defaultKg; LS.set("kb.weights",weights); renderDay(); };
-    $("sMinus").onclick=()=>{ weights.swingKg=clamp(weights.swingKg-1); $("sVal").textContent=weights.swingKg; LS.set("kb.weights",weights); renderDay(); };
-    $("sPlus").onclick =()=>{ weights.swingKg=clamp(weights.swingKg+1); $("sVal").textContent=weights.swingKg; LS.set("kb.weights",weights); renderDay(); };
-  }
-
-  $("modalClose").onclick=()=>{$("modal").style.display="none";};
-  weekSel.onchange = (e)=>{ week=Number(e.target.value); LS.set("kb.week",week); updateStatus(); };
-  $("daySelect").onchange = (e)=>{ day=e.target.value; LS.set("kb.day",day); renderDay(); buildSteps(); };
-  $("btnToday").onclick=()=>trainToday();
-  $("btnWeights").onclick=()=>openWeights();
-  $("btnDone").onclick=()=>{ const done=LS.get("kb.done",{}); done[doneKey()]={ts:Date.now()}; LS.set("kb.done",done); updateStatus(); };
-  $("btnStart").onclick=()=>start();
-  $("btnStop").onclick=()=>stop();
-  $("btnPrev").onclick=()=>{ state.idx=Math.max(0,state.idx-1); setStep(); };
-  $("btnNext").onclick=()=>{ state.idx=Math.min(state.steps.length,state.idx+1); setStep(); };
-
-  renderDay(); buildSteps(); updateStatus(); renderTime();
+renderDay();buildSteps();updateStatus();renderTime();
 })();
-</script>
-</body>
-</html>
+</script></body></html>

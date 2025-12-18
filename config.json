@@ -1,5 +1,5 @@
 {
-  "appName": "Kettlebell 30' — Bloque 1",
+  "appName": "Kettlebell 30' — Bloque 1 (v1.1)",
   "block": {
     "name": "Bloque 1",
     "weeks": "1–4",
@@ -13,10 +13,51 @@
     "defaultKg": 8,
     "swingKg": 14
   },
+  "warmup": {
+    "minutes": 6,
+    "title": "Calentamiento (6 min)",
+    "video": "https://www.youtube.com/watch?v=9Q0i4Pb6Blc",
+    "plan": [
+      {
+        "name": "Respiración + brace",
+        "seconds": 60
+      },
+      {
+        "name": "Bisagra de cadera (sin peso)",
+        "seconds": 60
+      },
+      {
+        "name": "Puente de glúteos",
+        "seconds": 60
+      },
+      {
+        "name": "Movilidad cadera/tobillo",
+        "seconds": 60
+      },
+      {
+        "name": "Marcha en el lugar",
+        "seconds": 60
+      },
+      {
+        "name": "Good morning suave",
+        "seconds": 60
+      }
+    ],
+    "notes": "Sin dolor, sin rebotes. Técnica y control."
+  },
+  "core": {
+    "intervals": 4,
+    "video": "https://www.youtube.com/watch?v=8k2tATXsrJk",
+    "cues": [
+      "Costillas abajo",
+      "Glúteos firmes",
+      "Abdomen activo",
+      "Alterna lado cada intervalo"
+    ]
+  },
   "days": {
     "A": {
       "title": "Día A — Metabólico + Abdomen",
-      "warmupMinutes": 6,
       "cooldownMinutes": 2,
       "rounds": 3,
       "main": [
@@ -55,13 +96,13 @@
           "name_en": "Rack March",
           "name_es": "Marcha en rack",
           "kg": "default",
+          "alternateSides": true,
           "notes": "Costillas abajo, glúteos firmes. Alterna lado cada intervalo."
         }
       ]
     },
     "B": {
       "title": "Día B — Fuerza funcional (rodilla friendly)",
-      "warmupMinutes": 6,
       "cooldownMinutes": 2,
       "rounds": 3,
       "main": [
@@ -100,13 +141,13 @@
           "name_en": "Incline Plank",
           "name_es": "Plancha elevada",
           "kg": 0,
-          "notes": "Manos en silla/mesa firme. Abdomen activo, glúteos firmes."
+          "alternateSides": false,
+          "notes": "Costillas abajo, glúteos firmes. Mantén línea cabeza-cadera-tobillos."
         }
       ]
     },
     "C": {
       "title": "Día C — Flow + Cardio articular (sin impacto)",
-      "warmupMinutes": 6,
       "cooldownMinutes": 2,
       "rounds": 3,
       "main": [
@@ -145,13 +186,13 @@
           "name_en": "Side Plank (incline)",
           "name_es": "Plancha lateral elevada",
           "kg": 0,
-          "notes": "Apoya antebrazo en banco/silla. Mantén línea hombro-cadera."
+          "alternateSides": true,
+          "notes": "Costillas abajo, glúteos firmes. Alterna lado cada intervalo."
         }
       ]
     },
     "D": {
       "title": "Día D — Core + Control + Movilidad",
-      "warmupMinutes": 6,
       "cooldownMinutes": 2,
       "rounds": 3,
       "main": [
@@ -187,30 +228,31 @@
       "core": [
         {
           "id": "anti_rotation_hold",
-          "name_en": "Anti-rotation hold",
+          "name_en": "Anti-rotación hold",
           "name_es": "Anti-rotación (sostén)",
           "kg": "default",
-          "notes": "Sostén unilateral. No te inclines. Alterna cada intervalo."
+          "alternateSides": true,
+          "notes": "Costillas abajo, glúteos firmes. Alterna lado cada intervalo."
         }
       ]
     }
   },
   "videos": {
-    "swing_russian": "https://www.youtube.com/results?search_query=kettlebell+swing+ruso+tecnica",
-    "deadlift_kb": "https://www.youtube.com/results?search_query=kettlebell+deadlift+tecnica",
-    "row_kb": "https://www.youtube.com/results?search_query=kettlebell+row+tecnica",
-    "suitcase_carry": "https://www.youtube.com/results?search_query=suitcase+carry+kettlebell+tecnica",
-    "goblet_squat_partial": "https://www.youtube.com/results?search_query=goblet+squat+kettlebell+tecnica",
-    "floor_press": "https://www.youtube.com/results?search_query=kettlebell+floor+press",
-    "rdl": "https://www.youtube.com/results?search_query=romanian+deadlift+kettlebell+tecnica",
-    "incline_plank": "https://www.youtube.com/results?search_query=incline+plank+technique",
-    "deadlift_rack_hold": "https://www.youtube.com/results?search_query=kettlebell+rack+hold+deadlift",
-    "march_in_place": "https://www.youtube.com/results?search_query=rack+carry+march+kettlebell",
-    "side_plank_incline": "https://www.youtube.com/results?search_query=side+plank+incline+technique",
-    "half_tgu": "https://www.youtube.com/results?search_query=half+turkish+get+up+technique",
-    "halo": "https://www.youtube.com/results?search_query=kettlebell+halo+exercise",
-    "bird_dog": "https://www.youtube.com/results?search_query=bird+dog+exercise+technique",
-    "suitcase_hold": "https://www.youtube.com/results?search_query=suitcase+hold+kettlebell",
-    "anti_rotation_hold": "https://www.youtube.com/results?search_query=anti+rotation+hold+kettlebell"
+    "swing_russian": "https://www.youtube.com/results?search_query=balanceo+ruso+pesa+rusa+t%C3%A9cnica",
+    "deadlift_kb": "https://www.youtube.com/results?search_query=peso+muerto+pesa+rusa+t%C3%A9cnica",
+    "row_kb": "https://www.youtube.com/results?search_query=remo+pesa+rusa+t%C3%A9cnica",
+    "suitcase_carry": "https://www.youtube.com/results?search_query=caminata+maleta+pesa+rusa",
+    "floor_press": "https://www.youtube.com/results?search_query=press+en+el+suelo+pesa+rusa",
+    "goblet_squat_partial": "https://www.youtube.com/results?search_query=sentadilla+goblet+pesa+rusa+t%C3%A9cnica",
+    "rdl": "https://www.youtube.com/results?search_query=peso+muerto+rumano+pesa+rusa+t%C3%A9cnica",
+    "incline_plank": "https://www.youtube.com/results?search_query=plancha+elevada+t%C3%A9cnica",
+    "deadlift_rack_hold": "https://www.youtube.com/results?search_query=rack+hold+pesa+rusa",
+    "march_in_place": "https://www.youtube.com/results?search_query=marcha+con+pesa+rusa+en+rack",
+    "side_plank_incline": "https://www.youtube.com/results?search_query=plancha+lateral+elevada+t%C3%A9cnica",
+    "half_tgu": "https://www.youtube.com/results?search_query=turkish+get+up+parcial+espa%C3%B1ol",
+    "halo": "https://www.youtube.com/results?search_query=halo+pesa+rusa+t%C3%A9cnica",
+    "bird_dog": "https://www.youtube.com/results?search_query=bird+dog+ejercicio+t%C3%A9cnica",
+    "suitcase_hold": "https://www.youtube.com/results?search_query=suitcase+hold+pesa+rusa",
+    "anti_rotation_hold": "https://www.youtube.com/results?search_query=anti+rotaci%C3%B3n+pesa+rusa"
   }
 }
